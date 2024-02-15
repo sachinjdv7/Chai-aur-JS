@@ -20,4 +20,4 @@ isAlive = true;
 //symbol (useful to find uniqueness)
 
 console.log(typeof undefined); // undefined
-console.log(typeof null); // null
+console.log(typeof null); // object
