@@ -47,3 +47,31 @@ const myFunction = function () {
 
 console.log(typeof bigNumber);
 console.log(typeof myFunction);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Javascript Memory
+
+/*
+1. Stack (premitive data types) -> In stack we will store the copy of the data.
+2. Heap (non-premitive data types) -> In heap we will store the reference of the data.
+*/
+
+let myYoutubeName = "hiteshchaudarydocom";
+let anotherName = myYoutubeName;
+anotherName = "chai aur js";
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let objOne = {
+  name: "sachin",
+  upi: "sachin@upi",
+};
+
+let objTwo = objOne;
+
+objTwo.upi = "sachin@okaxis";
+
+console.log(objOne.upi);
+console.log(objTwo.upi);
