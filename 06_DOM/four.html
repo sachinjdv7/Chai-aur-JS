@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="lang">
+        <li>Js</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const li  = document.createElement('li')
+        li.innerText = `${langName}`
+        document.querySelector('.lang').appendChild(li)
+    }
+    addLang('Python')
+    function addOptimumAddLang(langName){
+        
+        const li  = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addOptimumAddLang('Java')
+    addOptimumAddLang('Swift')
+
+    // Edit
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // li.innerText = 'C++'
+    const newLi  =  document.createElement('li')
+    newLi.textContent = 'C++'
+    secondLang.replaceWith(newLi)
+
+    //Edit
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+</script>
+</html>
