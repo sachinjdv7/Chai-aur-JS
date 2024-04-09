@@ -1,3 +1,5 @@
+//lexical scope
+
 function outer() {
   let username = "sachin";
   console.log(secret);
@@ -14,3 +16,16 @@ function outer() {
 }
 outer();
 // console.log("outer", username);
+
+//closure
+
+function makefunc() {
+  const name = "sachin";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+const myFunc = makefunc();
+myFunc();
